@@ -97,43 +97,66 @@ function openModule(u) {
 function openWeek(u, w) {
 
   let base = `semanas/semana${w}/`;
+  let contenido = [];
 
-  let contenido = "";
+  /* 🔥 CONFIG POR SEMANA (solo lo que existe) */
 
   if (w === 1) {
-    contenido = `
-      <div class="card" onclick="openFile('${base}s1_resumen.pdf')">📄 Resumen</div>
-      <div class="card" onclick="showImage('${base}s1_Int_Arquitectura.png')">🖼️ Intro Arquitectura</div>
-      <div class="card" onclick="showImage('${base}s1_FundamentosyEstandares.png')">🖼️ Fundamentos</div>
-    `;
+    contenido = [
+      { tipo: "pdf", nombre: "Resumen", archivo: "s1_resumen.pdf" },
+      { tipo: "img", nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
+      { tipo: "img", nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
+    ];
   }
 
   if (w === 2) {
-    contenido = `
-      <div class="card" onclick="openFile('${base}s2_resumen.pdf')">📄 Resumen</div>
-      <div class="card" onclick="showImage('${base}s2_Estandares.png')">🖼️ Estándares</div>
-    `;
+    contenido = [
+      { tipo: "pdf", nombre: "Resumen", archivo: "s2_resumen.pdf" },
+      { tipo: "img", nombre: "Estándares", archivo: "s2_Estandares.png" }
+    ];
   }
 
   if (w === 3) {
-    contenido = `
-      <div class="card" onclick="openFile('${base}s3_resumen.pdf')">📄 Resumen</div>
-      <div class="card" onclick="showImage('${base}s3_Fundamentos1.png')">🖼️ Fundamentos 1</div>
-      <div class="card" onclick="showImage('${base}s3_Fundamentos2.png')">🖼️ Fundamentos 2</div>
-    `;
+    contenido = [
+      { tipo: "pdf", nombre: "Resumen", archivo: "s3_resumen.pdf" },
+      { tipo: "img", nombre: "Fundamentos 1", archivo: "s3_Fundamentos1.png" },
+      { tipo: "img", nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
+    ];
   }
+
+  /* 🔥 GENERADOR AUTOMÁTICO DE BLOQUES */
+  let html = "";
+
+  contenido.forEach(item => {
+
+    if (item.tipo === "pdf") {
+      html += `
+        <div class="card" onclick="openFile('${base}${item.archivo}')">
+          📄 ${item.nombre}
+        </div>
+      `;
+    }
+
+    if (item.tipo === "img") {
+      html += `
+        <div class="card" onclick="showImage('${base}${item.archivo}')">
+          🖼️ ${item.nombre}
+        </div>
+      `;
+    }
+
+  });
 
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Unidad ${roman[u-1]} - Semana ${w}</h1>
 
     <div class="grid">
-      ${contenido}
+      ${html}
     </div>
 
     <div id="viewer"></div>
   `;
 }
-
 /* 📄 ABRIR PDF EN OTRA PESTAÑA */
 function openFile(url) {
   window.open(url, "_blank");
