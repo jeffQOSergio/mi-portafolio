@@ -13,7 +13,7 @@ function resetAutoClose() {
   clearTimeout(autoCloseTimer);
   autoCloseTimer = setTimeout(() => {
     document.getElementById("sidebar").classList.remove("active");
-  }, 5000); // más suave
+  }, 5000);
 }
 
 document.addEventListener("click", function(e) {
@@ -36,7 +36,7 @@ function showInfo() {
     <h1 class="neon-title">Información</h1>
     <p>
       Estudiante de Ingeniería de Sistemas.<br><br>
-      Portafolio académico del curso de Arquitectura de Software.
+      Portafolio académico del curso.
     </p>
   `;
 }
@@ -72,7 +72,7 @@ function toggleUnit(u, e) {
   }, 250);
 }
 
-/* 🔥 UNIDAD → GRID 2x2 */
+/* UNIDADES */
 function openModule(u) {
 
   let html = "";
@@ -93,13 +93,11 @@ function openModule(u) {
   `;
 }
 
-/* 🔥 SEMANAS CON ARCHIVOS REALES */
+/* SEMANAS DINÁMICAS */
 function openWeek(u, w) {
 
   let base = `semanas/semana${w}/`;
   let contenido = [];
-
-  /* 🔥 CONFIG POR SEMANA (solo lo que existe) */
 
   if (w === 1) {
     contenido = [
@@ -124,7 +122,6 @@ function openWeek(u, w) {
     ];
   }
 
-  /* 🔥 GENERADOR AUTOMÁTICO DE BLOQUES */
   let html = "";
 
   contenido.forEach(item => {
@@ -157,12 +154,11 @@ function openWeek(u, w) {
     <div id="viewer"></div>
   `;
 }
-/* 📄 ABRIR PDF EN OTRA PESTAÑA */
+
 function openFile(url) {
   window.open(url, "_blank");
 }
 
-/* 🖼️ MOSTRAR IMAGEN EN MISMA VENTANA */
 function showImage(src) {
   document.getElementById("viewer").innerHTML = `
     <img src="${src}" style="width:300px; margin-top:20px; border-radius:10px;">
