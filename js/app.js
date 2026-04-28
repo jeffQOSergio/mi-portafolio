@@ -110,7 +110,8 @@ function openWeek(u, w) {
   if (w === 2) {
     contenido = [
       { nombre: "Resumen", archivo: "s2_resumen.pdf" },
-      { nombre: "Estándares", archivo: "s2_Estandares.png" }
+      { nombre: "Estándares", archivo: "s2_Estandares.png" },
+      { nombre: "Requerimientos", archivo: "s2_ARQUITECTURA.pdf" }
     ];
   }
 
