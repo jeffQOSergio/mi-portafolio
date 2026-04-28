@@ -176,3 +176,25 @@ body {
   background: #00ffcc22;
   box-shadow: 0 0 8px #00ffcc;
 }
+/* CENTRAR LOGO EN NAVBAR */
+.navbar {
+  position: relative;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.nav-center img {
+  height: 35px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #00ffcc);
+  transition: 0.3s;
+}
+
+.nav-center img:hover {
+  transform: scale(1.1);
+}
