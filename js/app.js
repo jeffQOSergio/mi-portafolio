@@ -93,7 +93,7 @@ function openModule(u) {
   `;
 }
 
-/* SEMANAS DINÁMICAS */
+/* SEMANAS */
 function openWeek(u, w) {
 
   let base = `semanas/semana${w}/`;
@@ -102,22 +102,23 @@ function openWeek(u, w) {
   if (w === 1) {
     contenido = [
       { nombre: "Resumen", archivo: "s1_resumen.pdf" },
-      { nombre: "Introducción Arquitectura", archivo: "s1_Int_Arquitectura.png" },
-      { nombre: "Fundamentos y Estándares Organizador", archivo: "s1_FundamentosyEstandares.png" }
+      { nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
+      { nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
     ];
   }
 
   if (w === 2) {
     contenido = [
       { nombre: "Resumen", archivo: "s2_resumen.pdf" },
-      { nombre: "Estándares", archivo: "s2_Estandares.png" },
-      { nombre: "Requerimientos", archivo: "s2_ARQUITECTURA.pdf" }
+      { nombre: "Arquitectura V1.0", archivo: "s2_ARQUITECTURA_V1.0.pdf" },
+      { nombre: "Estándares", archivo: "s2_Estandares.png" }
     ];
   }
 
   if (w === 3) {
     contenido = [
       { nombre: "Resumen", archivo: "s3_resumen.pdf" },
+      { nombre: "Arquitectura V2.0", archivo: "s3_ARQUITECTURA_V2.0.pdf" },
       { nombre: "Fundamentos 1", archivo: "s3_Fundamentos1.png" },
       { nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
     ];
@@ -142,12 +143,7 @@ function openWeek(u, w) {
   `;
 }
 
+/* ABRIR TODO EN NUEVA PESTAÑA */
 function openFile(url) {
   window.open(url, "_blank");
-}
-
-function showImage(src) {
-  document.getElementById("viewer").innerHTML = `
-    <img src="${src}" style="width:300px; margin-top:20px; border-radius:10px;">
-  `;
 }
