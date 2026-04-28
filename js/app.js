@@ -102,8 +102,8 @@ function openWeek(u, w) {
   if (w === 1) {
     contenido = [
       { nombre: "Resumen", archivo: "s1_resumen.pdf" },
-      { nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
-      { nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
+      { nombre: "Introducción Arquitectura", archivo: "s1_Int_Arquitectura.png" },
+      { nombre: "Fundamentos y Estándares Organizador", archivo: "s1_FundamentosyEstandares.png" }
     ];
   }
 
