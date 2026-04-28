@@ -6,20 +6,16 @@ const roman = ["I","II","III","IV"];
 function toggleMenu() {
   let sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("active");
-
   resetAutoClose();
 }
 
-/* 🔥 AUTO CIERRE */
 function resetAutoClose() {
   clearTimeout(autoCloseTimer);
-
   autoCloseTimer = setTimeout(() => {
     document.getElementById("sidebar").classList.remove("active");
-  }, 4000); // 4 segundos
+  }, 5000); // más suave
 }
 
-/* CIERRE SI HACES CLICK AFUERA */
 document.addEventListener("click", function(e) {
   let sidebar = document.getElementById("sidebar");
 
@@ -40,7 +36,7 @@ function showInfo() {
     <h1 class="neon-title">Información</h1>
     <p>
       Estudiante de Ingeniería de Sistemas.<br><br>
-      Portafolio del curso de Arquitectura de Software desarrollado en 16 semanas.
+      Portafolio académico del curso de Arquitectura de Software.
     </p>
   `;
 }
@@ -51,7 +47,6 @@ function openUpla() {
 
 /* CLICK vs DOBLE CLICK */
 function toggleUnit(u, e) {
-
   e.stopPropagation();
 
   if (clickTimer) {
@@ -62,7 +57,6 @@ function toggleUnit(u, e) {
   }
 
   clickTimer = setTimeout(() => {
-
     let all = document.querySelectorAll(".weeks");
 
     all.forEach(w => {
@@ -75,10 +69,10 @@ function toggleUnit(u, e) {
     actual.style.display = actual.style.display === "block" ? "none" : "block";
 
     clickTimer = null;
-
   }, 250);
 }
 
+/* 🔥 UNIDAD → GRID 2x2 */
 function openModule(u) {
 
   let html = "";
@@ -86,7 +80,11 @@ function openModule(u) {
   for (let i = 1; i <= 4; i++) {
     let semana = (u - 1) * 4 + i;
 
-    html += `<div class="card" onclick="openWeek(${u},${semana})">Semana ${semana}</div>`;
+    html += `
+      <div class="card" onclick="openWeek(${u},${semana})">
+        Semana ${semana}
+      </div>
+    `;
   }
 
   document.getElementById("content").innerHTML = `
@@ -95,22 +93,53 @@ function openModule(u) {
   `;
 }
 
+/* 🔥 SEMANAS CON ARCHIVOS REALES */
 function openWeek(u, w) {
+
+  let base = `semanas/semana${w}/`;
+
+  let contenido = "";
+
+  if (w === 1) {
+    contenido = `
+      <div class="card" onclick="openFile('${base}s1_resumen.pdf')">📄 Resumen</div>
+      <div class="card" onclick="showImage('${base}s1_Int_Arquitectura.png')">🖼️ Intro Arquitectura</div>
+      <div class="card" onclick="showImage('${base}s1_FundamentosyEstandares.png')">🖼️ Fundamentos</div>
+    `;
+  }
+
+  if (w === 2) {
+    contenido = `
+      <div class="card" onclick="openFile('${base}s2_resumen.pdf')">📄 Resumen</div>
+      <div class="card" onclick="showImage('${base}s2_Estandares.png')">🖼️ Estándares</div>
+    `;
+  }
+
+  if (w === 3) {
+    contenido = `
+      <div class="card" onclick="openFile('${base}s3_resumen.pdf')">📄 Resumen</div>
+      <div class="card" onclick="showImage('${base}s3_Fundamentos1.png')">🖼️ Fundamentos 1</div>
+      <div class="card" onclick="showImage('${base}s3_Fundamentos2.png')">🖼️ Fundamentos 2</div>
+    `;
+  }
 
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Unidad ${roman[u-1]} - Semana ${w}</h1>
 
     <div class="grid">
-      <div class="card" onclick="window.open('docs/semana${w}.pdf','_blank')">📄 Documento</div>
-      <div class="card" onclick="showImage('img/semana${w}.jpg')">🖼️ Imagen</div>
-      <div class="card" onclick="window.open('docs/tarea${w}.pdf','_blank')">📄 Tarea</div>
-      <div class="card" onclick="showImage('img/extra${w}.jpg')">🖼️ Extra</div>
+      ${contenido}
     </div>
 
     <div id="viewer"></div>
   `;
 }
 
+/* 📄 ABRIR PDF EN OTRA PESTAÑA */
+function openFile(url) {
+  window.open(url, "_blank");
+}
+
+/* 🖼️ MOSTRAR IMAGEN EN MISMA VENTANA */
 function showImage(src) {
   document.getElementById("viewer").innerHTML = `
     <img src="${src}" style="width:300px; margin-top:20px; border-radius:10px;">
