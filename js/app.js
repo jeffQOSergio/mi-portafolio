@@ -101,47 +101,35 @@ function openWeek(u, w) {
 
   if (w === 1) {
     contenido = [
-      { tipo: "pdf", nombre: "Resumen", archivo: "s1_resumen.pdf" },
-      { tipo: "img", nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
-      { tipo: "img", nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
+      { nombre: "Resumen", archivo: "s1_resumen.pdf" },
+      { nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
+      { nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
     ];
   }
 
   if (w === 2) {
     contenido = [
-      { tipo: "pdf", nombre: "Resumen", archivo: "s2_resumen.pdf" },
-      { tipo: "img", nombre: "Estándares", archivo: "s2_Estandares.png" }
+      { nombre: "Resumen", archivo: "s2_resumen.pdf" },
+      { nombre: "Estándares", archivo: "s2_Estandares.png" }
     ];
   }
 
   if (w === 3) {
     contenido = [
-      { tipo: "pdf", nombre: "Resumen", archivo: "s3_resumen.pdf" },
-      { tipo: "img", nombre: "Fundamentos 1", archivo: "s3_Fundamentos1.png" },
-      { tipo: "img", nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
+      { nombre: "Resumen", archivo: "s3_resumen.pdf" },
+      { nombre: "Fundamentos 1", archivo: "s3_Fundamentos1.png" },
+      { nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
     ];
   }
 
   let html = "";
 
   contenido.forEach(item => {
-
-    if (item.tipo === "pdf") {
-      html += `
-        <div class="card" onclick="openFile('${base}${item.archivo}')">
-          📄 ${item.nombre}
-        </div>
-      `;
-    }
-
-    if (item.tipo === "img") {
-      html += `
-        <div class="card" onclick="showImage('${base}${item.archivo}')">
-          🖼️ ${item.nombre}
-        </div>
-      `;
-    }
-
+    html += `
+      <div class="card" onclick="openFile('${base}${item.archivo}')">
+        📂 ${item.nombre}
+      </div>
+    `;
   });
 
   document.getElementById("content").innerHTML = `
@@ -150,8 +138,6 @@ function openWeek(u, w) {
     <div class="grid">
       ${html}
     </div>
-
-    <div id="viewer"></div>
   `;
 }
 
