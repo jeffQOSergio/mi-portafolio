@@ -8,6 +8,9 @@ function toggleMenu() {
   sidebar.classList.toggle("active");
   resetAutoClose();
 }
+function openUpla() {
+  window.open("https://upla.edu.pe/", "_blank");
+}
 
 function resetAutoClose() {
   clearTimeout(autoCloseTimer);
