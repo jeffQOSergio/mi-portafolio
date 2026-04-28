@@ -1,31 +1,10 @@
 let clickTimer = null;
-let autoCloseTimer = null;
 
 const roman = ["I","II","III","IV"];
 
 function toggleMenu() {
-  let sidebar = document.getElementById("sidebar");
-  sidebar.classList.toggle("active");
-  resetAutoClose();
+  document.getElementById("sidebar").classList.toggle("active");
 }
-function openUpla() {
-  window.open("https://upla.edu.pe/", "_blank");
-}
-
-function resetAutoClose() {
-  clearTimeout(autoCloseTimer);
-  autoCloseTimer = setTimeout(() => {
-    document.getElementById("sidebar").classList.remove("active");
-  }, 5000);
-}
-
-document.addEventListener("click", function(e) {
-  let sidebar = document.getElementById("sidebar");
-
-  if (!sidebar.contains(e.target) && !e.target.classList.contains("hamburger")) {
-    sidebar.classList.remove("active");
-  }
-});
 
 function goHome() {
   document.getElementById("content").innerHTML = `
@@ -37,10 +16,7 @@ function goHome() {
 function showInfo() {
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Información</h1>
-    <p>
-      Estudiante de Ingeniería de Sistemas.<br><br>
-      Portafolio académico del curso.
-    </p>
+    <p>Portafolio académico del curso de Arquitectura de Software.</p>
   `;
 }
 
@@ -48,7 +24,7 @@ function openUpla() {
   window.open("https://upla.edu.pe/", "_blank");
 }
 
-/* CLICK vs DOBLE CLICK */
+/* CLICK / DOBLE CLICK */
 function toggleUnit(u, e) {
   e.stopPropagation();
 
@@ -77,7 +53,6 @@ function toggleUnit(u, e) {
 
 /* UNIDADES */
 function openModule(u) {
-
   let html = "";
 
   for (let i = 1; i <= 4; i++) {
@@ -104,26 +79,21 @@ function openWeek(u, w) {
 
   if (w === 1) {
     contenido = [
-      { nombre: "Resumen", archivo: "s1_resumen.pdf" },
-      { nombre: "Intro Arquitectura", archivo: "s1_Int_Arquitectura.png" },
-      { nombre: "Fundamentos", archivo: "s1_FundamentosyEstandares.png" }
+      { nombre: "Resumen", archivo: "s1_resumen.pdf" }
     ];
   }
 
   if (w === 2) {
     contenido = [
       { nombre: "Resumen", archivo: "s2_resumen.pdf" },
-      { nombre: "Arquitectura V1.0", archivo: "s2_ARQUITECTURA_V1.0.pdf" },
-      { nombre: "Estándares", archivo: "s2_Estandares.png" }
+      { nombre: "Arquitectura V1.0", archivo: "s2_ARQUITECTURA_V1.0.pdf" }
     ];
   }
 
   if (w === 3) {
     contenido = [
       { nombre: "Resumen", archivo: "s3_resumen.pdf" },
-      { nombre: "Arquitectura V2.0", archivo: "s3_ARQUITECTURA_V2.0.pdf" },
-      { nombre: "Fundamentos 1", archivo: "s3_Fundamentos1.png" },
-      { nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
+      { nombre: "Arquitectura V2.0", archivo: "s3_ARQUITECTURA_V2.0.pdf" }
     ];
   }
 
@@ -139,14 +109,10 @@ function openWeek(u, w) {
 
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Unidad ${roman[u-1]} - Semana ${w}</h1>
-
-    <div class="grid">
-      ${html}
-    </div>
+    <div class="grid">${html}</div>
   `;
 }
 
-/* ABRIR TODO EN NUEVA PESTAÑA */
 function openFile(url) {
   window.open(url, "_blank");
 }
