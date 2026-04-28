@@ -1,12 +1,10 @@
 let clickTimer = null;
 let roman = ["I","II","III","IV"];
 
-/* MENU */
 function toggleMenu() {
   document.getElementById("sidebar").classList.toggle("active");
 }
 
-/* HOME */
 function goHome() {
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Arquitectura de Software</h1>
@@ -14,7 +12,6 @@ function goHome() {
   `;
 }
 
-/* INFO */
 function showInfo() {
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Información</h1>
@@ -22,12 +19,10 @@ function showInfo() {
   `;
 }
 
-/* UPLA */
 function openUpla() {
   window.open("https://upla.edu.pe/", "_blank");
 }
 
-/* CLICK vs DOBLE CLICK */
 function toggleUnit(u, e) {
   e.stopPropagation();
 
@@ -49,7 +44,6 @@ function toggleUnit(u, e) {
   }, 250);
 }
 
-/* UNIDAD */
 function openModule(u) {
   let html = "";
 
@@ -64,7 +58,6 @@ function openModule(u) {
   `;
 }
 
-/* 🔥 CONTENIDO REAL */
 const contenido = {
   1: [
     ["Resumen", "semanas/s1_resumen.pdf"],
@@ -84,7 +77,6 @@ const contenido = {
   ]
 };
 
-/* SEMANA */
 function openWeek(u, w) {
 
   let lista = contenido[w] || [];
