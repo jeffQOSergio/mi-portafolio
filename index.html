@@ -14,9 +14,9 @@
 
   <div class="logo">Portafolio Académico</div>
 
-  <!-- 🔥 LOGO CENTRO -->
+  <!-- LOGO CENTRO -->
   <div class="nav-center" onclick="openUpla()">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw0xFiQcbUEdJad4-RUVRJWpsfnO2y5pFKrA&s" alt="UPLA">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw0xFiQcbUEdJad4-RUVRJWpsfnO2y5pFKrA&s">
   </div>
 
   <div class="nav-links">
@@ -51,8 +51,45 @@
     <span class="close-btn" onclick="toggleMenu()">✖</span>
   </div>
 
-  <!-- TU MENÚ SE QUEDA IGUAL -->
-  <!-- (no lo toco como pediste) -->
+  <div class="unit" onclick="toggleUnit(1,event)">
+    Unidad I
+    <div class="weeks" id="u1">
+      <div class="week" onclick="openWeek(1,1)">Semana 1</div>
+      <div class="week" onclick="openWeek(1,2)">Semana 2</div>
+      <div class="week" onclick="openWeek(1,3)">Semana 3</div>
+      <div class="week" onclick="openWeek(1,4)">Semana 4</div>
+    </div>
+  </div>
+
+  <div class="unit" onclick="toggleUnit(2,event)">
+    Unidad II
+    <div class="weeks" id="u2">
+      <div class="week" onclick="openWeek(2,5)">Semana 5</div>
+      <div class="week" onclick="openWeek(2,6)">Semana 6</div>
+      <div class="week" onclick="openWeek(2,7)">Semana 7</div>
+      <div class="week" onclick="openWeek(2,8)">Semana 8</div>
+    </div>
+  </div>
+
+  <div class="unit" onclick="toggleUnit(3,event)">
+    Unidad III
+    <div class="weeks" id="u3">
+      <div class="week" onclick="openWeek(3,9)">Semana 9</div>
+      <div class="week" onclick="openWeek(3,10)">Semana 10</div>
+      <div class="week" onclick="openWeek(3,11)">Semana 11</div>
+      <div class="week" onclick="openWeek(3,12)">Semana 12</div>
+    </div>
+  </div>
+
+  <div class="unit" onclick="toggleUnit(4,event)">
+    Unidad IV
+    <div class="weeks" id="u4">
+      <div class="week" onclick="openWeek(4,13)">Semana 13</div>
+      <div class="week" onclick="openWeek(4,14)">Semana 14</div>
+      <div class="week" onclick="openWeek(4,15)">Semana 15</div>
+      <div class="week" onclick="openWeek(4,16)">Semana 16</div>
+    </div>
+  </div>
 
 </div>
 
