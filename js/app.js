@@ -124,6 +124,7 @@ function openWeek(u, w) {
     ];
   }
 
+
   let html = "";
 
   contenido.forEach(item => {
