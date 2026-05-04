@@ -19,12 +19,32 @@ body {
   padding: 0 30px;
   border-bottom: 1px solid #00ffcc33;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
-  font-size: 16px;
+  color: #00ffcc;
 }
 
+/* LOGO CENTRO */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.nav-center img {
+  height: 35px;
+  filter: drop-shadow(0 0 5px #00ffcc);
+  transition: 0.3s;
+}
+
+.nav-center img:hover {
+  transform: scale(1.1);
+}
+
+/* LINKS */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -34,7 +54,7 @@ body {
   cursor: pointer;
 }
 
-/* CONTENIDO */
+/* CONTENEDOR */
 .main-container {
   position: absolute;
   top: 60px;
@@ -46,6 +66,7 @@ body {
   align-items: center;
 }
 
+/* CONTENT */
 .content {
   width: 90%;
   max-width: 800px;
@@ -54,6 +75,7 @@ body {
 
 /* TITULO */
 .neon-title {
+  color: #00ffcc;
   text-shadow: 0 0 15px #00ffcc;
 }
 
@@ -68,14 +90,14 @@ body {
 /* CARDS */
 .card {
   background: #0a0a0a;
-  padding: 40px;
-  border-radius: 15px;
+  padding: 50px 20px;
+  border-radius: 20px;
   border: 1px solid #00ffcc33;
   cursor: pointer;
 }
 
 .card:hover {
-  box-shadow: 0 0 10px #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
 }
 
 /* FOOTER */
@@ -87,6 +109,7 @@ body {
   background: #050505;
   text-align: center;
   line-height: 40px;
+  border-top: 1px solid #00ffcc33;
 }
 
 /* SIDEBAR */
@@ -95,9 +118,12 @@ body {
   top: 70px;
   right: 15px;
   font-size: 30px;
+  color: #00ffcc;
   cursor: pointer;
+  z-index: 1100;
 }
 
+/* SIDEBAR FIX VISUAL */
 .sidebar {
   position: fixed;
   top: 60px;
@@ -107,11 +133,7 @@ body {
   background: #050505;
   padding: 15px;
   transition: 0.5s;
-  overflow: hidden;
-}
-
-.sidebar.active {
-  right: 0;
+  overflow: hidden; /* 🔥 evita que se vean letras */
 }
 
 .sidebar:not(.active) {
@@ -119,21 +141,55 @@ body {
   padding: 0;
 }
 
+.sidebar.active {
+  right: 0;
+}
+
+/* HEADER SIDEBAR */
 .sidebar-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-.unit {
-  margin: 10px 0;
+.close-btn {
   cursor: pointer;
 }
+
+/* UNITS */
+
 
 .weeks {
   display: none;
 }
 
-.week {
-  margin: 5px 0;
+/* 🔥 UNIDADES EN CUADROS (como versión 1) */
+.unit {
+  background: #0a0a0a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #00ffcc33;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.unit:hover {
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* SEMANAS COMO MINI BOTONES */
+.week {
+  background: #111;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #00ffcc22;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.week:hover {
+  background: #00ffcc22;
+  box-shadow: 0 0 8px #00ffcc;
 }
