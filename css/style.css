@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Orbitron', Arial;
   background: #000;
-  color: #00ffcc;
+  color: #086518;
   overflow: hidden;
 }
 
@@ -24,6 +24,7 @@ body {
 
 .logo {
   color: #00ffcc;
+  transform: translateX(15px); /* mueve a la derecha */
 }
 
 /* LOGO CENTRO */
@@ -36,7 +37,7 @@ body {
 
 .nav-center img {
   height: 35px;
-  filter: drop-shadow(0 0 5px #00ffcc);
+  filter: drop-shadow(0 0 5px #036116);
   transition: 0.3s;
 }
 
@@ -75,7 +76,7 @@ body {
 
 /* TITULO */
 .neon-title {
-  color: #00ffcc;
+  color: #086729;
   text-shadow: 0 0 15px #00ffcc;
 }
 
@@ -118,7 +119,7 @@ body {
   top: 70px;
   right: 15px;
   font-size: 30px;
-  color: #00ffcc;
+  color: #045a15;
   cursor: pointer;
   z-index: 1100;
 }
@@ -192,4 +193,125 @@ body {
 .week:hover {
   background: #00ffcc22;
   box-shadow: 0 0 8px #00ffcc;
+}
+body {
+  margin: 0;
+  font-family: 'Orbitron', Arial;
+  background: #000;
+  color: #00ff88; /* 🔥 verde neon */
+  overflow: hidden;
+}
+
+/* 🌞 MODO CLARO */
+body.light {
+  background: #f5f5f5;
+  color: #006b3c;
+}
+
+/* BOTÓN TEMA */
+.theme-btn {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #050505;
+  border-bottom: 1px solid #00ff8833;
+}
+
+body.light .navbar {
+  background: #eaeaea;
+  border-bottom: 1px solid #006b3c33;
+}
+
+.logo {
+  color: #00ff88;
+}
+
+body.light .logo {
+  color: #006b3c;
+}
+
+/* LOGO */
+.nav-center img {
+  filter: drop-shadow(0 0 5px #00ff88);
+}
+
+/* TITULO */
+.neon-title {
+  color: #00ff88;
+  text-shadow: 0 0 15px #00ff88;
+}
+
+body.light .neon-title {
+  color: #006b3c;
+  text-shadow: 0 0 10px #006b3c;
+}
+
+/* CARDS */
+.card {
+  border: 1px solid #00ff8833;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px #00ff88;
+}
+
+body.light .card {
+  border: 1px solid #006b3c33;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid #00ff8833;
+}
+
+body.light .footer {
+  background: #eaeaea;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #050505;
+}
+
+body.light .sidebar {
+  background: #eaeaea;
+}
+
+/* UNITS */
+.unit {
+  border: 1px solid #00ff8833;
+}
+
+.unit:hover {
+  box-shadow: 0 0 10px #00ff88;
+}
+
+body.light .unit {
+  border: 1px solid #006b3c33;
+}
+
+.week {
+  border: 1px solid #00ff8822;
+}
+
+.week:hover {
+  background: #00ff8822;
+  box-shadow: 0 0 8px #00ff88;
+}
+#themeBtn {
+  background: transparent;
+  border: 1px solid #00ffcc33;
+  color: #0a5c1d;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#themeBtn:hover {
+  box-shadow: 0 0 10px #00ffcc;
 }
