@@ -123,6 +123,12 @@ function openWeek(u, w) {
       { nombre: "Fundamentos 2", archivo: "s3_Fundamentos2.png" }
     ];
   }
+  if (w === 4) {
+  contenido = [
+    { nombre: "Arquitectura EYP1", archivo: "s4_arquitectura_eyp1.png" },
+    { nombre: "Arquitectura V2.1", archivo: "s4_ARQUITECTURA_V2.1.pdf" }
+  ];
+}
 
 
   let html = "";
@@ -147,4 +153,7 @@ function openWeek(u, w) {
 /* ABRIR TODO EN NUEVA PESTAÑA */
 function openFile(url) {
   window.open(url, "_blank");
+}
+function toggleTheme() {
+  document.body.classList.toggle("light");
 }
