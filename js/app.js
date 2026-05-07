@@ -27,16 +27,16 @@ document.addEventListener("click", function(e) {
 function goHome() {
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Arquitectura de Software</h1>
-    <p>Universidad Peruana Los Andes</p>
+    <p class="neon-title">Universidad Peruana Los Andes</p>
   `;
 }
 
 function showInfo() {
   document.getElementById("content").innerHTML = `
-    <h1 class="neon-title">Información</h1>
+    <h1 class="neon-title">Jeffry Sergio</h1>
     <p>
       Estudiante de Ingeniería de Sistemas.<br><br>
-      Portafolio académico del curso.
+      Portafolio académico.
     </p>
   `;
 }
