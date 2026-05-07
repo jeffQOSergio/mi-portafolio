@@ -24,7 +24,7 @@ body {
 
 .logo {
   color: #086729;
-  transform: translateX(15px); /* mueve a la derecha */
+  transform: translateX(50px); /* mueve a la derecha */
 }
 
 /* LOGO CENTRO */
