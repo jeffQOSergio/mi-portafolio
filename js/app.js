@@ -128,6 +128,12 @@ function openWeek(u, w) {
     { nombre: "Arquitectura EYP1", archivo: "s4_arquitectura_eyp1.png" },
     { nombre: "Arquitectura V2.1", archivo: "s4_ARQUITECTURA_V2.1.pdf" }
   ];
+    }
+    if (w === 5) {
+  contenido = [
+    { nombre: "Arquitectura IR", archivo: "s5_resumen.pdf" },
+    { nombre: "Arquitectura Gráfico", archivo: "s5_ir.png" }
+  ];
 }
 
 
