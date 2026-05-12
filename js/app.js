@@ -132,7 +132,7 @@ function openWeek(u, w) {
     if (w === 5) {
   contenido = [
     { nombre: "Arquitectura IR", archivo: "s5_resumen.pdf" },
-    { nombre: "Arquitectura Gráfico", archivo: "s5_ir.png" }
+    { nombre: "Arquitectura Gráfico", archivo: "s5_ir1.jpg" }
   ];
 }
 
