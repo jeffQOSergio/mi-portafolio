@@ -131,9 +131,21 @@ function openWeek(u, w) {
     }
     if (w === 5) {
   contenido = [
-    { nombre: "Arquitectura IR", archivo: "s5_resumen.pdf" },
-    { nombre: "Arquitectura Gráfico", archivo: "s5_ir1.jpg" }
+    { nombre: "Infografía POO 1", archivo: "5_infografiaPOO1.jpg" },
+    { nombre: "Infografía POO 2", archivo: "5_infografiaPOO2.jpg" },
+    { nombre: "Infografía POO 3", archivo: "5_infografiaPOO3.jpg" },
+    { nombre: "Infografía POO 4", archivo: "5_infografiaPOO4.jpg" },
+    { nombre: "Infografía POO 5", archivo: "5_infografiaPOO5.jpg" },
+    { nombre: "Infografía POO 6", archivo: "5_infografiaPOO6.jpg" }
   ];
+}
+
+if (w === 6) {
+  contenido = [
+    { nombre: "Infografía IR Tema 1", archivo: "6_infografiaIRTema1.jpg" },
+    { nombre: "Infografía IR Tema 2", archivo: "6_infografiaIRTema2.jpg" }
+  ];
+
 }
 
 
