@@ -143,7 +143,8 @@ function openWeek(u, w) {
 if (w === 6) {
   contenido = [
     { nombre: "Infografía IR Tema 1", archivo: "6_infografiaIRTema1.jpg" },
-    { nombre: "Infografía IR Tema 2", archivo: "6_infografiaIRTema2.jpg" }
+    { nombre: "Infografía IR Tema 2", archivo: "6_infografiaIRTema2.jpg" },
+    { nombre: "Proyecto polarizado v2.2", archivo: "s4_ARQUITECTURA_V2.2.pdf" }
   ];
 
 }
