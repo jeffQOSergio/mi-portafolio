@@ -147,8 +147,10 @@ if (w === 6) {
   ];
 
 }
-
-
+if (w === 7) {
+  contenido = [
+    { nombre: "Proyecto v2.2", archivo: "s4_ARQUITECTURA_V2.2.pdf" }
+}
   let html = "";
 
   contenido.forEach(item => {
