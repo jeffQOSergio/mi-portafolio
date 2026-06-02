@@ -150,10 +150,22 @@ if (w === 6) {
 }
   if (w === 9) {
   contenido = [
-    { nombre: "Infografía Tema 1", archivo: "s9_tema1" },
-    { nombre: "Infografía Tema 2", archivo: "s9_tema2" },
-    { nombre: "Infografía Tema 3", archivo: "s9_tema3" },
-    { nombre: "Infografía Tema 4", archivo: "s9_tema4" },
+    { nombre: "Infografía Subtema 1", archivo: "s9_tema1" },
+    { nombre: "Infografía Subtema 2", archivo: "s9_tema2" },
+    { nombre: "Infografía Subtema 3", archivo: "s9_tema3" },
+    { nombre: "Infografía Subtema 4", archivo: "s9_tema4" },
+    { nombre: "Infografía Subtema 5", archivo: "s9_tema5" },
+    { nombre: "Infografía Subtema 6", archivo: "s9_tema6" },
+    { nombre: "Infografía Subtema 7", archivo: "s9_tema7" },
+    { nombre: "Infografía Subtema 8", archivo: "s9_tema8" },
+    { nombre: "Infografía Subtema 9", archivo: "s9_tema9" },
+    { nombre: "Infografía Subtema 10", archivo: "s9_tema10" },
+    { nombre: "Infografía Subtema 11", archivo: "s9_tema11" },
+    { nombre: "Infografía Subtema 12", archivo: "s9_tema12" },
+    { nombre: "Infografía Subtema 13", archivo: "s9_tema13" },
+    { nombre: "Infografía Subtema 14", archivo: "s9_tema14" },
+    { nombre: "Infografía Subtema 15", archivo: "s9_tema15" },
+    { nombre: "Infografía Subtema 16", archivo: "s9_tema16" }
   ];
 
 }
