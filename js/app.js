@@ -150,10 +150,10 @@ if (w === 6) {
 }
   if (w === 9) {
   contenido = [
-    { nombre: "Infografía Subtema 1", archivo: "s9_t1.png" },
-    { nombre: "Infografía Subtema 2", archivo: "s9_t2.png" },
-    { nombre: "Infografía Subtema 3", archivo: "s9_t3.png" },
-    { nombre: "Infografía Subtema 4", archivo: "s9_t4.png" }
+    { nombre: "Infografía Subtema 1", archivo: "s9_tema1.png" },
+    { nombre: "Infografía Subtema 2", archivo: "s9_tema2.png" },
+    { nombre: "Infografía Subtema 3", archivo: "s9_tema3.png" },
+    { nombre: "Infografía Subtema 4", archivo: "s9_tema4.png" }
   ];
 
 }
