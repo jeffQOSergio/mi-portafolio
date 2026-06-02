@@ -148,6 +148,15 @@ if (w === 6) {
   ];
 
 }
+  if (w === 9) {
+  contenido = [
+    { nombre: "Infografía Tema 1", archivo: "s9_tema1" },
+    { nombre: "Infografía Tema 2", archivo: "s9_tema2" },
+    { nombre: "Infografía Tema 3", archivo: "s9_tema3" },
+    { nombre: "Infografía Tema 4", archivo: "s9_tema4" },
+  ];
+
+}
 
   let html = "";
 
