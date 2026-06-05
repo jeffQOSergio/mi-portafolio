@@ -148,6 +148,20 @@ if (w === 6) {
   ];
 
 }
+  if (w === 7) {
+  contenido = [
+    { nombre: "Infografía 1", archivo: "7_1.jpg" },
+    { nombre: "Infografía 2", archivo: "7_2.jpg" },
+    { nombre: "Infografía 3", archivo: "7_3.jpg" }
+  ];
+
+}
+  if (w === 8) {
+  contenido = [
+    { nombre: "Proyecto polarizado v3.0", archivo: "8_v3.pdf" }
+  ];
+
+}
   if (w === 9) {
   contenido = [
     { nombre: "Infografía Subtema 1", archivo: "s9_1.png" },
