@@ -159,7 +159,7 @@ if (w === 6) {
 }
   if (w === 8) {
   contenido = [
-    { nombre: "Proyecto polarizado v3.0", archivo: "8_v3.pdf" }
+    { nombre: "Proyecto polarizado v3.0", archivo: "s8_ARQUITECTURA_V3.0.pdf" }
   ];
 
 }
