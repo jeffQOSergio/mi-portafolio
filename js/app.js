@@ -152,7 +152,8 @@ if (w === 6) {
   contenido = [
     { nombre: "Infografía 1", archivo: "7_1.jpg" },
     { nombre: "Infografía 2", archivo: "7_2.jpg" },
-    { nombre: "Infografía 3", archivo: "7_3.jpg" }
+    { nombre: "Infografía 3", archivo: "7_3.jpg" },
+    { nombre: "Infografía 4", archivo: "7_4.jpg" }
   ];
 
 }
