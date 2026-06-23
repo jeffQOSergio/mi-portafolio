@@ -172,6 +172,26 @@ if (w === 6) {
   ];
 
 }
+  if (w === 10) {
+  contenido = [
+    { nombre: "Tema 1", archivo: "s10_1.png" },
+    { nombre: "Tema 2", archivo: "s10_2.png" }
+  ];
+
+}
+  if (w === 11) {
+  contenido = [
+    { nombre: "Infografía 1", archivo: "s11_1.png" }
+  ];
+
+}
+  if (w === 12) {
+  contenido = [
+    { nombre: "Arquitectura Sistema", archivo: "s12_1.png" },
+    { nombre: "Sistema de Polarizado", archivo: "s12_2.png" }
+  ];
+
+}
 
   let html = "";
 
