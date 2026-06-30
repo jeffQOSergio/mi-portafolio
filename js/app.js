@@ -194,7 +194,7 @@ if (w === 6) {
 }
   if (w === 13) {
   contenido = [
-    { nombre: "Arquitectura Tema 1", archivo: "s13_1.jpg" }
+    { nombre: "Tema 1", archivo: "s13_1.jpg" }
   ];
 
 }
