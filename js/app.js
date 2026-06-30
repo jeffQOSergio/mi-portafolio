@@ -194,7 +194,25 @@ if (w === 6) {
 }
   if (w === 13) {
   contenido = [
-    { nombre: "Arquitectura Sistema", archivo: "s13_1.jpg" }
+    { nombre: "Arquitectura Tema 1", archivo: "s13_1.jpg" }
+  ];
+
+}
+  if (w === 14) {
+  contenido = [
+    { nombre: "Arquitectura Tema 1", archivo: "s14_1.jpg" }
+  ];
+
+}
+  if (w === 15) {
+  contenido = [
+    { nombre: "Arquitectura Tema 1", archivo: "s15_1.jpg" }
+  ];
+
+}
+  if (w === 16) {
+  contenido = [
+    { nombre: "Arquitectura Tema 1", archivo: "s16_1.jpg" }
   ];
 
 }
