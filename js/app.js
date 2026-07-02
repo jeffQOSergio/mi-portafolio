@@ -187,10 +187,15 @@ if (w === 6) {
 }
   if (w === 12) {
   contenido = [
-    { nombre: "Arquitectura Sistema", archivo: "s12_1.png" },
-    { nombre: "Sistema de Polarizado", url: "https://jeffqosergio.github.io/sistema-polarizado-web/" }
+    {
+      nombre: "Arquitectura Sistema",
+      archivo: "s12_1.png"
+    },
+    {
+      nombre: "Sistema de Polarizado",
+      url: "https://jeffqosergio.github.io/sistema-polarizado-web/"
+    }
   ];
-
 }
   if (w === 13) {
   contenido = [
@@ -219,11 +224,15 @@ if (w === 6) {
 
   let html = "";
 
-  contenido.forEach(item => {
+contenido.forEach(item => {
 
-  let ruta = item.archivo.startsWith("http")
-      ? item.archivo
-      : base + item.archivo;
+  let ruta = "";
+
+  if (item.url) {
+    ruta = item.url;
+  } else {
+    ruta = base + item.archivo;
+  }
 
   html += `
     <div class="card" onclick="openFile('${ruta}')">
