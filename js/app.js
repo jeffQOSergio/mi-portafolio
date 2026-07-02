@@ -188,7 +188,7 @@ if (w === 6) {
   if (w === 12) {
   contenido = [
     { nombre: "Arquitectura Sistema", archivo: "s12_1.png" },
-    { nombre: "Sistema de Polarizado", archivo: "https://jeffqosergio.github.io/sistema-polarizado-web/" }
+    { nombre: "Sistema de Polarizado", url: "https://jeffqosergio.github.io/sistema-polarizado-web/" }
   ];
 
 }
