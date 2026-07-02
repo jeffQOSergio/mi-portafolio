@@ -220,13 +220,6 @@ if (w === 6) {
   let html = "";
 
   contenido.forEach(item => {
-    html += `
-      <div class="card" onclick="openFile('${base}${item.archivo}')">
-        📂 ${item.nombre}
-      </div>
-    `;
-  });
-  contenido.forEach(item => {
 
   let ruta = item.archivo.startsWith("http")
       ? item.archivo
@@ -238,7 +231,7 @@ if (w === 6) {
     </div>
   `;
 });
-
+  
   document.getElementById("content").innerHTML = `
     <h1 class="neon-title">Unidad ${roman[u-1]} - Semana ${w}</h1>
 
